@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOTORI | Crochet by Geraldine</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFDF9',
+                        'cream-card': '#FFFFFF',
+                        'pastel-green': {
+                            light: '#EEF8F1',
+                            DEFAULT: '#A8E0B7',
+                            dark: '#62AD75'
+                        },
+                        'pastel-pink': {
+                            light: '#FFF0F3',
+                            DEFAULT: '#FFB7C5',
+                            dark: '#E07A8B'
+                        },
+                        'pastel-purple': {
+                            light: '#F4EFFC',
+                            DEFAULT: '#C3ACD0',
+                            dark: '#8E6C9F'
+                        },
+                        'warm-gray': '#584C49'
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFFDF9;
+            color: #584C49;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .modal-backdrop {
+            background-color: rgba(88, 76, 73, 0.4);
+            backdrop-filter: blur(4px);
+        }
+
+        .page-view {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        .page-view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header & Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-md border-b border-pastel-green-light shadow-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between">
+            <!-- Brand Logo & Tagline -->
+            <a href="javascript:void(0)" onclick="switchPage('pricelist')" class="flex items-center gap-3">   
+            <div class="w-10 h-10 rounded-2xl overflow-hidden border border-pastel-pink/40 shadow-xs shrink-0">
+                <img
+                    src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/670892939_1606712838121670_8779623811750905498_n.jpg?stp=dst-jpg_tt6&cstp=mx928x930&ctp=s552x414&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGVsqHFD0WUH9xwRifbZlb96wSjrUQNoJzrBKOtRA2gnG4qGiu-yApomX1dCSd64M7F8bhLd_clfG5gmmL82Soy&_nc_ohc=9MLt8CoyPlUQ7kNvwHUkRrE&_nc_oc=AdrPXAR7iKmwmAGYdsr-klDix6ewFIz6CzUCCZR2353k-qdoHQrQlB91-mweX6l9aUkiWwN9UR5g5ZYoodUQbIUA&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=xO2fVhOWPkDxVi0nzn_HKA&_nc_ss=7b2a8&oh=00_AQNDBADylrFZv2ekMn0pn01bA4w6sRwmru1X9OgPwgv2OQ&oe=6ADE0E89"
+                    alt="KNOTORI Crochet by Geraldine Logo"
+                    class="w-full h-full object-cover">
+            </div>
+                <div>
+                    <h1 class="font-heading font-extrabold text-xl sm:text-2xl text-warm-gray tracking-wider flex items-center gap-2">
+                        KNOTORI
+                        <span class="text-[10px] font-semibold bg-pastel-pink-light text-pastel-pink-dark border border-pastel-pink/30 px-2 py-0.5 rounded-full uppercase tracking-normal">Crochet by Geraldine</span>
+                    </h1>
+                    <p class="text-[11px] font-medium text-warm-gray/70 italic hidden sm:block">"Knot by knot, dream by dream"</p>
+                </div>
+            </a>
+
+            <!-- Desktop Multi-Page Tabs Nav -->
+            <nav class="hidden md:flex items-center gap-2 bg-pastel-green-light/70 p-1.5 rounded-2xl border border-pastel-green/30">
+                <button 
+                    onclick="switchPage('pricelist')" 
+                    id="nav-pricelist"
+                    class="nav-tab px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 bg-white text-warm-gray shadow-xs"
+                >
+                    <i class="fa-solid fa-list-ul mr-1.5 text-pastel-pink-dark"></i> Pricelist Catalog
+                </button>
+                <button 
+                    onclick="switchPage('about')" 
+                    id="nav-about"
+                    class="nav-tab px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 text-warm-gray/80 hover:text-warm-gray"
+                >
+                    <i class="fa-solid fa-heart mr-1.5 text-pastel-purple-dark"></i> About Me
+                </button>
+                <button 
+                    onclick="switchPage('events')" 
+                    id="nav-events"
+                    class="nav-tab px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 text-warm-gray/80 hover:text-warm-gray"
+                >
+                    <i class="fa-solid fa-bullhorn mr-1.5 text-pastel-green-dark"></i> Events & News
+                </button>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden text-warm-gray text-xl p-2 focus:outline-none" aria-label="Toggle Navigation">
+                <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden px-4 pb-3 pt-1 flex flex-col gap-2 font-semibold text-xs text-warm-gray border-t border-pastel-green-light bg-cream">
+            <button onclick="switchPage('pricelist'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-xl hover:bg-pastel-pink-light flex items-center gap-2">
+                <i class="fa-solid fa-list-ul text-pastel-pink-dark"></i> Pricelist Catalog
+            </button>
+            <button onclick="switchPage('about'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-xl hover:bg-pastel-purple-light flex items-center gap-2">
+                <i class="fa-solid fa-heart text-pastel-purple-dark"></i> About Me
+            </button>
+            <button onclick="switchPage('events'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-xl hover:bg-pastel-green-light flex items-center gap-2">
+                <i class="fa-solid fa-bullhorn text-pastel-green-dark"></i> Events & News
+            </button>
+        </div>
+    </header>
+
+    <!-- Sub Header Banner (Tagline) -->
+    <div class="bg-gradient-to-r from-pastel-pink-light via-pastel-purple-light to-pastel-green-light border-b border-pastel-pink/20 py-2.5 px-4 text-center">
+        <p class="text-xs sm:text-sm font-semibold text-warm-gray flex items-center justify-center gap-2">
+            <span>✨ Welcome, this page is currently on progress...</span>
+            <span class="hidden sm:inline text-warm-gray/40">•</span>
+        </p>
+    </div>
+
+    <!-- Main Content Container containing Multiple Dynamic Pages -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 flex-grow w-full py-8">
+
+        <!-- PAGE 1: PRICELIST CATALOG -->
+        <section id="page-pricelist" class="page-view active space-y-8">
+            
+            <!-- Page Title Header -->
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-pastel-pink-dark bg-pastel-pink-light border border-pastel-pink/30 px-3 py-1 rounded-full">Price List & Catalog</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-warm-gray">Handcrafted Price Guide</h2>
+                <p class="text-warm-gray/80 text-xs sm:text-sm">Browse our available crocheted items, baseline pricing, and customization tiers.</p>
+            </div>
+
+            <!-- Controls: Search & Category Filters -->
+            <div class="space-y-4">
+                <!-- Search Bar -->
+                <div class="max-w-md mx-auto relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-warm-gray/50 text-xs"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput"
+                        placeholder="Search items (e.g. sweater, frog, keychain)..." 
+                        class="w-full pl-10 pr-10 py-2.5 bg-white border border-pastel-purple/40 rounded-2xl shadow-xs focus:outline-none focus:ring-2 focus:ring-pastel-purple/50 text-warm-gray placeholder-warm-gray/40 transition text-xs sm:text-sm"
+                        oninput="handleSearch()"
+                    >
+                    <button 
+                        id="clearSearchBtn" 
+                        onclick="clearSearch()" 
+                        class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-warm-gray/60 hover:text-warm-gray w-5 h-5 flex items-center justify-center rounded-full bg-warm-gray/10"
+                    >
+                        <i class="fa-solid fa-xmark text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-1">
+                    <button 
+                        onclick="filterCategory('all')" 
+                        data-category="all"
+                        class="filter-btn active-tab bg-pastel-pink-dark text-white px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        ✨ All Items
+                    </button>
+                    <button 
+                        onclick="filterCategory('wardrobe')" 
+                        data-category="wardrobe"
+                        class="filter-btn bg-white text-warm-gray border border-pastel-green/40 hover:bg-pastel-green-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        👗 Wardrobe
+                    </button>
+                    <button 
+                        onclick="filterCategory('keychains')" 
+                        data-category="keychains"
+                        class="filter-btn bg-white text-warm-gray border border-pastel-pink/40 hover:bg-pastel-pink-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        🔑 Keychains
+                    </button>
+                    <button 
+                        onclick="filterCategory('amigurumis')" 
+                        data-category="amigurumis"
+                        class="filter-btn bg-white text-warm-gray border border-pastel-purple/40 hover:bg-pastel-purple-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        🧸 Amigurumis
+                    </button>
+                    <button 
+                        onclick="filterCategory('bouquet')" 
+                        data-category="bouquet"
+                        class="filter-btn bg-white text-warm-gray border border-pastel-green/40 hover:bg-pastel-green-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        🌸 Bouquet
+                    </button>
+                    <button 
+                        onclick="filterCategory('bag_charms')" 
+                        data-category="bag_charms"
+                        class="filter-btn bg-white text-warm-gray border border-pastel-green/40 hover:bg-pastel-green-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        🪻 Bag Charm
+                    </button>
+                    <button 
+                        onclick="filterCategory('desk_figures')" 
+                        data-category="desk_figures"
+                        class="filter-btn bg-white text-warm-gray border border-pastel-green/40 hover:bg-pastel-green-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        Desk Figures
+                    </button>
+                    <button 
+                        onclick="filterCategory('bags')" 
+                        data-category="bags"
+                        class="filter-btn bg-white text-warm-gray border border-pastel-green/40 hover:bg-pastel-green-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        Bags
+                    </button>
+                    <button 
+                        onclick="filterCategory('hair_accesories')" 
+                        data-category="hair_accesories"
+                        class="filter-btn bg-white text-warm-gray border border-pastel-green/40 hover:bg-pastel-green-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
+                    >
+                        Hair Accesories
+                    </button>
+                </div>
+            </div>
+
+            <!-- Header Info Bar -->
+            <div class="flex items-center justify-between border-b border-warm-gray/10 pb-3">
+                <h3 id="currentCategoryTitle" class="font-heading font-bold text-lg text-warm-gray flex items-center gap-2">
+                    ✨ All Items
+                </h3>
+                <span id="itemCount" class="text-xs font-bold bg-pastel-purple-light text-pastel-purple-dark px-3 py-0.5 rounded-full border border-pastel-purple/30">
+                    0 items
+                </span>
+            </div>
+
+            <!-- Square 1:1 Product Card Grid -->
+            <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Dynamically populated via JS -->
+            </div>
+
+            <!-- Empty Search Results -->
+            <div id="emptyState" class="hidden text-center py-16 px-4">
+                <div class="w-14 h-14 mx-auto bg-pastel-pink-light text-pastel-pink-dark rounded-full flex items-center justify-center text-xl mb-3">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h4 class="font-heading text-base font-bold text-warm-gray">No items found</h4>
+                <p class="text-warm-gray/60 text-xs mt-1">Try adjusting your search terms or filter selection.</p>
+                <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-pastel-pink-dark text-white text-xs font-bold rounded-full shadow-xs hover:bg-pastel-pink-dark/90 transition">
+                    Reset Catalog Filters
+                </button>
+            </div>
+        </section>
+
+        <!-- PAGE 2: ABOUT ME ("ABOUT") -->
+        <section id="page-about" class="page-view space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-pastel-purple-dark bg-pastel-purple-light border border-pastel-purple/30 px-3 py-1 rounded-full">Artisan Profile</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-warm-gray">Meet Geraldine</h2>
+                <p class="text-warm-gray/80 text-xs sm:text-sm">The creator behind KNOTORI's handmade crochet creations.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-pastel-purple/30 shadow-xs">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Artisan Photo Placeholder -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-tr from-pastel-pink-light via-pastel-purple-light to-pastel-green-light border-2 border-pastel-purple/30 shadow-xs p-2">
+                            <img 
+                                src="https://scontent.cdninstagram.com/v/t51.82787-19/654604432_18398126650148328_7746375650875987864_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=111&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=W-yVZ_uBxKgQ7kNvwHiZtoU&_nc_oc=Adq48LXUHHY2sQUX1tjmruod562bw4UGSAQbWqDnfFZZIiLVj0_Dgg0i1HCah-_xEdhpo_SpsNdR4scgmZHyTBc3&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=zGpMnpk5-xRC4org2bRczw&_nc_ss=7b689&oh=00_AQNBRYDdY60axVPTxrzpyfqHno6W9tdevfcw3vGM2SdnGQ&oe=6ADE3337" 
+                                alt="Geraldine crocheting yarn" 
+                                class="w-full h-full object-cover rounded-xl"
+                                onerror="handleImgError(this, 'Geraldine (KNOTORI)')"
+                            >
+                        </div>
+                        <div class="absolute -bottom-3 -right-3 bg-pastel-green-light text-pastel-green-dark border border-pastel-green/40 px-3 py-1.5 rounded-xl shadow-xs text-xs font-bold flex items-center gap-1.5">
+                            <i class="fa-solid fa-certificate text-pastel-pink-dark"></i> Master Crafter
+                        </div>
+                    </div>
+
+                    <!-- Story & Philosophy -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <h3 class="font-heading font-bold text-2xl text-warm-gray">
+                            "Knot by knot, dream by dream..."
+                        </h3>
+                        <p class="text-warm-gray/90 text-xs sm:text-sm leading-relaxed">
+                            Hello! I'm <strong>Geraldine</strong>, the founder, designer, and sole hands behind <strong>KNOTORI</strong>. Every piece in this catalog begins as a simple loop of yarn and transforms stitch by stitch into a piece of art made with endless care and attention.
+                        </p>
+                        <p class="text-warm-gray/80 text-xs sm:text-sm leading-relaxed">
+                            My crochet philosophy centers on <strong>slow, intentional craft</strong> using soft milk cotton, chenille, and durable acrylic blends. Whether I'm stitching cozy wearable wardrobe items, cute little keychains, or detailed plush amigurumis, my goal is to bring cozy warmth to your day.
+                        </p>
+
+                        <!-- Highlights Grid -->
+                        <div class="grid grid-cols-3 gap-3 pt-2 text-center">
+                            <div class="bg-pastel-pink-light/60 p-3 rounded-2xl border border-pastel-pink/20">
+                                <p class="font-heading font-bold text-base text-pastel-pink-dark">100%</p>
+                                <p class="text-[11px] font-semibold text-warm-gray/70">Handmade</p>
+                            </div>
+                            <div class="bg-pastel-green-light/60 p-3 rounded-2xl border border-pastel-green/20">
+                                <p class="font-heading font-bold text-base text-pastel-green-dark">Skin-Friendly</p>
+                                <p class="text-[11px] font-semibold text-warm-gray/70">Quality Yarns</p>
+                            </div>
+                            <div class="bg-pastel-purple-light/60 p-3 rounded-2xl border border-pastel-purple/20">
+                                <p class="font-heading font-bold text-base text-pastel-purple-dark">Customized</p>
+                                <p class="text-[11px] font-semibold text-warm-gray/70">Made to Order</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Yarn Care & Craft Guide -->
+            <div class="bg-gradient-to-r from-pastel-green-light/50 via-cream to-pastel-pink-light/50 rounded-3xl p-6 sm:p-8 border border-pastel-green/30">
+                <h3 class="font-heading font-bold text-xl text-warm-gray mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-hand-holding-heart text-pastel-pink-dark"></i> Geraldine's Yarn Care Tips
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-warm-gray/80">
+                    <div class="bg-white/80 p-4 rounded-2xl border border-pastel-green/30 space-y-1">
+                        <p class="font-bold text-warm-gray flex items-center gap-1.5 text-xs">
+                            <i class="fa-solid fa-soap text-pastel-green-dark"></i> Gentle Hand Wash
+                        </p>
+                        <p>Wash in cool water using mild detergent. Avoid harsh scrubbing or twisting the stitches.</p>
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-2xl border border-pastel-pink/30 space-y-1">
+                        <p class="font-bold text-warm-gray flex items-center gap-1.5 text-xs">
+                            <i class="fa-solid fa-[#FFB7C5] fa-mattress-pillow text-pastel-pink-dark"></i> Air Dry Flat
+                        </p>
+                        <p>Lay flat on a clean towel in a shaded area. Never hang wearable crochet as it may stretch the fibers!</p>
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-2xl border border-pastel-purple/30 space-y-1">
+                        <p class="font-bold text-warm-gray flex items-center gap-1.5 text-xs">
+                            <i class="fa-solid fa-sparkles text-pastel-purple-dark"></i> Plushie Fluffing
+                        </p>
+                        <p>Gently reshape your amigurumi or plushies after shipping or washing to keep them looking squishy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: EVENTS & ANNOUNCEMENTS ("EVENTS") -->
+        <section id="page-events" class="page-view space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-pastel-green-dark bg-pastel-green-light border border-pastel-green/30 px-3 py-1 rounded-full">Community & Updates</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-warm-gray">Events & Announcements</h2>
+                <p class="text-warm-gray/80 text-xs sm:text-sm">Stay up to date with pop-up craft markets, restock dates, and custom commission slots.</p>
+            </div>
+
+            <!-- Announcements Cards List -->
+            <div class="space-y-4 max-w-4xl mx-auto">
+                
+                <!-- Event 1 -->
+                <div class="bg-white p-5 sm:p-6 rounded-3xl border border-pastel-pink/40 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-pastel-pink transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-pastel-pink-light border border-pastel-pink/30 flex flex-col items-center justify-center shrink-0 text-pastel-pink-dark font-heading">
+                            <span class="text-xs font-bold uppercase">NOV</span>
+                            <span class="text-lg font-extrabold leading-none">14</span>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <span class="bg-pastel-pink-light text-pastel-pink-dark text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-pastel-pink/30">
+                                    🛒 Craft Fair
+                                </span>
+                                <span class="text-xs text-warm-gray/60 font-semibold">10:00 AM - 6:00 PM</span>
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-warm-gray">Cozy Handmade Artisan Market</h3>
+                            <p class="text-xs text-warm-gray/80">Visit the KNOTORI booth to see, feel, and purchase our amigurumis and keychains in person!</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-pastel-pink-dark bg-pastel-pink-light px-3 py-1 rounded-full whitespace-nowrap self-end sm:self-center">
+                        Upcoming Event
+                    </span>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="bg-white p-5 sm:p-6 rounded-3xl border border-pastel-purple/40 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-pastel-purple transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-pastel-purple-light border border-pastel-purple/30 flex flex-col items-center justify-center shrink-0 text-pastel-purple-dark font-heading">
+                            <span class="text-xs font-bold uppercase">DEC</span>
+                            <span class="text-lg font-extrabold leading-none">01</span>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <span class="bg-pastel-purple-light text-pastel-purple-dark text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-pastel-purple/30">
+                                    ✨ Seasonal Drop
+                                </span>
+                                <span class="text-xs text-warm-gray/60 font-semibold">Online Catalog Update</span>
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-warm-gray">Winter & Holiday Collection Launch</h3>
+                            <p class="text-xs text-warm-gray/80">New festive beanie hats, cozy scarves, and limited Christmas tree plushies dropping on the catalog.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-pastel-purple-dark bg-pastel-purple-light px-3 py-1 rounded-full whitespace-nowrap self-end sm:self-center">
+                        Restock Alert
+                    </span>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="bg-white p-5 sm:p-6 rounded-3xl border border-pastel-green/40 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-pastel-green transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-pastel-green-light border border-pastel-green/30 flex flex-col items-center justify-center shrink-0 text-pastel-green-dark font-heading">
+                            <span class="text-xs font-bold uppercase">OPEN</span>
+                            <span class="text-base font-extrabold leading-none"><i class="fa-solid fa-scissors"></i></span>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <span class="bg-pastel-green-light text-pastel-green-dark text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-pastel-green/30">
+                                    🎨 Commission Slots
+                                </span>
+                                <span class="text-xs text-warm-gray/60 font-semibold">5 Slots Available</span>
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-warm-gray">Custom Wardrobe & Plushie Orders</h3>
+                            <p class="text-xs text-warm-gray/80">Geraldine is accepting 5 custom color / sizing order inquiries for next month's queue.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-pastel-green-dark bg-pastel-green-light px-3 py-1 rounded-full whitespace-nowrap self-end sm:self-center">
+                        Open For Slots
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer & Social Contact Section -->
+    <footer class="bg-gradient-to-b from-cream to-pastel-green-light/40 border-t border-pastel-green/30 pt-10 pb-8 px-4 mt-12 text-warm-gray">
+        <div class="max-w-5xl mx-auto space-y-8">
+            
+            <!-- Footer Branding & Social Links -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div>
+                    <h3 class="font-heading font-extrabold text-2xl text-warm-gray flex items-center justify-center md:justify-start gap-2">
+                        <i></i> KNOTORI.
+                    </h3>
+                </div>
+
+                <!-- Social Copy Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 text-xs">
+                   <a href="https://www.instagram.com/knotori.est2025/"
+                    target="_blank" rel="noopener noreferrer"
+                    class="px-3.5 py-2 bg-white hover:bg-pastel-pink-light border border-pastel-pink/30 rounded-xl font-bold transition flex items-center gap-1.5 shadow-xs">
+                        <i class="fa-brands fa-instagram text-pastel-pink-dark"></i> Instagram
+                    </a>
+
+                    <a href="https://www.facebook.com/knotori.est2025/"
+                    target="_blank" rel="noopener noreferrer"
+                    class="px-3.5 py-2 bg-white hover:bg-pastel-purple-light border border-pastel-purple/30 rounded-xl font-bold transition flex items-center gap-1.5 shadow-xs">
+                        <i class="fa-brands fa-facebook-f text-pastel-purple-dark"></i> Facebook
+                    </a>
+
+                    <a href="https://www.tiktok.com/@knotori_est2025"
+                    target="_blank" rel="noopener noreferrer"
+                    class="px-3.5 py-2 bg-white hover:bg-pastel-green-light border border-pastel-green/30 rounded-xl font-bold transition flex items-center gap-1.5 shadow-xs">
+                        <i class="fa-brands fa-tiktok text-pastel-green-dark"></i> TikTok
+                    </a>
+
+                    <a href="mailto:knotori2025@gmail.com"
+                    class="px-3.5 py-2 bg-white hover:bg-pastel-pink-light border border-pastel-pink/30 rounded-xl font-bold transition flex items-center gap-1.5 shadow-xs">
+                        <i class="fa-regular fa-envelope text-pastel-pink-dark"></i> Email
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-6 border-t border-warm-gray/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-warm-gray/60 gap-2">
+                <p>&copy; <span id="currentYear"></span> KNOTORI CROCHETED FABRICS MANUFACTURING. All rights reserved.</p>
+                <p class="italic">Knot by knot, dream by dream 🌸</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAIL INSPECTION MODAL -->
+    <div id="detailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop opacity-0 transition-opacity duration-200">
+        <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-pastel-purple/30 transform scale-95 transition-transform duration-200">
+            <!-- Header -->
+            <div class="relative bg-pastel-purple-light/50 p-4 border-b border-pastel-purple/20 flex justify-between items-center">
+                <span id="modalCategoryBadge" class="text-[10px] font-extrabold uppercase tracking-wider bg-white text-pastel-purple-dark px-3 py-0.5 rounded-full border border-pastel-purple/30">Category</span>
+                <button onclick="closeDetailModal()" class="w-7 h-7 rounded-full bg-white hover:bg-pastel-pink-light text-warm-gray flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-xs"></i>
+                </button>
+            </div>
+
+            <div class="p-5 space-y-4">
+                <!-- 1:1 Aspect Ratio Square Image -->
+                <div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-pastel-pink-light/30 border border-pastel-pink/20">
+                    <img id="modalImage" src="" alt="Product Image" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Info -->
+                <div>
+                    <div class="flex justify-between items-start gap-2">
+                        <h3 id="modalTitle" class="font-heading font-bold text-lg text-warm-gray">Product Name</h3>
+                        <span id="modalPrice" class="text-xs font-extrabold text-pastel-pink-dark bg-pastel-pink-light border border-pastel-pink/30 px-2.5 py-1 rounded-xl whitespace-nowrap">
+                            $0.00
+                        </span>
+                    </div>
+                    <p id="modalDescription" class="text-warm-gray/80 text-xs mt-2 leading-relaxed">
+                        Description text goes here.
+                    </p>
+                </div>
+
+                <!-- Price/Customization Guide Box -->
+                <div class="bg-pastel-green-light/60 border border-pastel-green/30 rounded-2xl p-3 text-xs text-pastel-green-dark space-y-1">
+                    <p class="font-bold flex items-center gap-1.5 text-[11px]">
+                        <i class="fa-solid fa-circle-info"></i> Price & Crafting Options:
+                    </p>
+                    <p id="modalOptions" class="text-[11px] text-warm-gray/80">Details regarding sizing or custom colors.</p>
+                </div>
+
+                <!-- Action Button -->
+                <div class="pt-1">
+                    <button onclick="closeDetailModal()" class="w-full py-2.5 bg-pastel-purple-light hover:bg-pastel-purple/20 font-bold text-xs rounded-xl text-warm-gray transition">
+                        Close Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-warm-gray text-cream px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 transform translate-y-4">
+        <i class="fa-solid fa-circle-check text-pastel-green text-base"></i>
+        <div>
+            <p id="toastTitle" class="font-bold text-xs">Copied!</p>
+            <p id="toastMsg" class="text-[11px] text-cream/80">Text copied to clipboard.</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // KNOTORI Crochet Products Database
+        const products = [
+            {
+                id: 1,
+                name: "Pink Mesh Back Top",
+                category: "wardrobe",
+                categoryLabel: "Wardrobe",
+                price: "₱400 - ₱650",
+                description: "Handcrafted cropt-top two way strings. Made using soft, mixed color, breathable 100% milk cotton yarn.",
+                options: "Sizes: XS to XXL available. All colors available. Note: Made to order, this is just a pricelist.",
+                image: "https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/611321693_1519270506865904_574648247094822557_n.jpg?stp=dst-jpg_tt6&cstp=mx992x1056&ctp=s992x1056&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFURoYwZxZgI4Mm6fkpcn2eDTL2-St3yS4NMvb5K3fJLvrDHxwAdydA2OVxf6KaKu8-5y2tZFI3y4OlM9dROQ1E&_nc_ohc=PmH-9RNbkmUQ7kNvwEJtiHS&_nc_oc=Adq9Ql0GZi-xfm_t0_5Gz1XegtZwGQDGYMQJyUx0oZN07V84Y3UIUoWKIQ-Hm5qKaFWdXAsShnOhCoX78FyL8Wg-&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=YD92SKW8cmEgXJL_SSzETw&_nc_ss=7b2a8&oh=00_AQNPIdzinbp-B2NJ33TUJnCQKn4ICYHkZ2GMwlSlC6zoKw&oe=6ADE0EDA"
+            },
+            {
+                id: 2,
+                name: "Warm Color Bandana Top",
+                category: "wardrobe",
+                categoryLabel: "Wardrobe",
+                price: "₱350-₱750",
+                description: "Whimsical warm color top for summer fit",
+                options: "Elastic waist band customized to your measurements. Colors: Apple Green, Pink, Cream.",
+                image: "https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/657141495_1594408716018749_5010393596574956447_n.jpg?stp=dst-jpg_tt6&cstp=mx1195x896&ctp=s1195x896&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFjnLtQM1rTq7lkuD2qqb5yA6C9FFMrLLsDoL0UUyssu2BOxjp1Je5LM56BG5qOj1b7oQjHsh9i4ptUD-rLFtTj&_nc_ohc=w_spKDGDgjAQ7kNvwHccieF&_nc_oc=AdrSs67PUQkpeQjy06aF4E7Fg5mjfKKR95kfH1d0lt5UmjCu-QXtEol6acpcYYLLR9clzjqNfZDeFbnwuRjnXjFc&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=_CmE16oxEYS0GLoj_yQqGQ&_nc_ss=7b2a8&oh=00_AQOzurIp4EFdrbHMG4Xw5tb6_C2F2Pq4G-sTE0BpzlUCGQ&oe=6ADDE8BC"
+            },
+            {
+                id: 3,
+                name: "Chibi Crocheted Characters",
+                category: "amigurumis",
+                categoryLabel: "Amigurumi",
+                price: "₱450 - ₱2,500",
+                description: "",
+                options: "You can send me inspo, and details for the character also the size.",
+                image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.99422-6/855259626_1776348434285702_5632558084272914522_n.png?stp=dst-jpg_tt6&cstp=mx896x1195&ctp=s896x1195&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFXHTkZf4HJYXiF1z2CH4XzXDYgBGAKK7FcNiAEYAorsVHMYXcL5CGXLPKlQntLq1X3__tunje_4vmINFi7JK8s&_nc_ohc=J_xmLcy84C4Q7kNvwEz8d7I&_nc_oc=AdoiXhdtoxemRpJtYRZp573qy2sowbHBdBOWmaxWym46Js84cvx0aJd4WlKrqgtI3yDB8wIhfs7eOnYiiPIwDY7k&_nc_zt=14&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=AZp5jFiwHKST44iTHjGNCg&_nc_ss=7b2a8&oh=00_AQNoR4kthW8v8tUWt1txgWuXYvwO1zF2RSxyrKFG0DFCjQ&oe=6ADE08C8"
+            },
+            {
+                id: 4,
+                name: "Purple Two-Way Bag",
+                category: "bags",
+                categoryLabel: "Bags",
+                price: "₱350",
+                description: "Miniature spotted red or pastel cap mushroom bag charm with gold lobster swivel clasp.",
+                options: "Cap Color Options: Apple Green, Warm Pink, Soft Lavender, Cream.",
+                image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.99422-6/799843833_4506672479661367_2754544163990443205_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFdxfF2c1BYWubLj0yoBbSJ5qVkyp5cSCbmpWTKnlxIJhBffvRt8tMvU02LSxVvhmtXweAMPpd34BdLmKi9tRim&_nc_ohc=FmDHDCLFjHwQ7kNvwEJpunu&_nc_oc=AdqDRPZauKxALPHx8I0lUidDu6n6-zgM2Yjjx-tHLwSMAoAi-_DYLIKxqwCUtC9YOsnONM35uj-9D3myXlw_4tEN&_nc_zt=14&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=DdYKXBAl9MbPmNwYNSy9zA&_nc_ss=7b2a8&oh=00_AQO3jVIBsGgFKgtra97pm9tLtpkHcD1xVN40KiS48UOoSQ&oe=6ADE1B48"
+            },
+            {
+                id: 5,
+                name: "Single Flower Hairclips",
+                category: "hair_accesories",
+                categoryLabel: "Hair Accesories",
+                price: "₱35",
+                description: "Micro crochet boba cup featuring embroidered tapioca pearls and a tiny straw attachment.",
+                options: "Flavors: Taro Lavender, Matcha Green, Strawberry Pink, Classic Milk Tea.",
+                image: "https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/605333419_1509522707840684_7557331121831109345_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2047&ctp=s2048x2047&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEsIdqwrVAL9AmMCKCCkrghy_Adm7JJIXHL8B2bskkhcZXQdSpTw_XEUzO3KyG2TAE5gAbggS4wz-rJk6_dgqQW&_nc_ohc=iFOBUJEKNlcQ7kNvwFgFfmX&_nc_oc=AdphtWNS7QGWGAZSXYBMuoMyFdmO1MP7JzqLeLW_HizKkVBFt29wdEKaQC2VNFFvVZYUEUvMx9n-cEIgJSVmkZWX&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=toiT_GOpHVD1a1su7pi1SA&_nc_ss=7b2a8&oh=00_AQNyQ2bqWiq6DtPs3dWWNR6YW6Zz_CsIs6Td9pCpokDE7Q&oe=6ADE0F14"
+            },
+            {
+                id: 6,
+                name: "Big Fairy Bouquet",
+                category: "bouquet",
+                categoryLabel: "Bouquet",
+                price: "₱1,500",
+                description: "Round chubby frog plush crocheted with ultra-soft velvet chenille yarn and safety eyes.",
+                options: "Includes mini detachable sweater or sprout hat accessory.",
+                image: "https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.99422-6/841439163_958778233444990_6814493635369709199_n.png?stp=dst-jpg_tt6&cstp=mx896x1195&ctp=s896x1195&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeE8rxiq9J5HaaAVaqwq6lF0FhpIVVV5T-EWGkhVVXlP4bS8mrUDdwWTy1o4Eo9GY8ZR-YsupqTw2CCv1xB4gNB6&_nc_ohc=lYFC_p9VtyUQ7kNvwEUIwED&_nc_oc=AdoMYhkVbdwsC5rkFOR_Iar6nz9wNnB6inAF5Y9fD1-7jLIqdKZNXVkIgRnEsiWzwlgR-efQ-Z4vdlMN-PmJ_Vdt&_nc_zt=14&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=-y9iX37pi90fpEvz8MkWrw&_nc_ss=7b2a8&oh=00_AQMBQr8BPPDWntqICj4FlupagQ17lqywDgVf5zGjIBhA2A&oe=6ADE23D9"
+            },
+            {
+                id: 7,
+                name: "Mirror Bag Charm",
+                category: "bag_charms",
+                categoryLabel: "Bag Charms",
+                price: "₱135",
+                description: "Cuddle-sized teddy bear wearing a striped sleeping cap filled with hypoallergenic fiberfill.",
+                options: "Medium (8\"): ₱750 | Large (12\"): ₱1,100.",
+                image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/659061115_1599085118884442_8583126500532390049_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHlgr-9IvOHHf6LVuxds6LEg_FEcYZiVAKD8URxhmJUAvWFOsgZveqrqa1hb-A6DnvIHMBVuOD1vvbNxwCDdqvi&_nc_ohc=hmEtQawIgGUQ7kNvwHm1MHP&_nc_oc=AdrnkuSny8ww7Ha7KSZ61Oosj3BlYYmquyvIB0k5y1W1xxnxC6FBNrhwT-G7RXDKNC5nrmfpJ-QMUht0Iaw24EOI&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=U1zt-EhIQjmucYbwPa6OQg&_nc_ss=7b2a8&oh=00_AQM9v7-KQML-W8dZBUj0OsKnxBlofVlq4TQ8Eb15U4pv3A&oe=6ADDF86D"
+            },
+            {
+                id: 8,
+                name: "Coaster",
+                category: "desk_figures",
+                categoryLabel: "Desk Figures",
+                price: "₱45-₱200",
+                description: "Retro checkered tote bag with reinforced double-stitched shoulder straps that resist stretching.",
+                options: "Color Combos: Lavender/Cream, Apple Green/Cream, Pink/Cream.",
+                image: "https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/762916533_1720823506710602_3310082661572178657_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s552x414&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeH02SqTP9xvaPskx58UpylpfOzmhVPqVPB87OaFU-pU8OfqykLo8fGJ-vJUd0Fwzh5G_Q9SK9t6N4mXGGTrncAu&_nc_ohc=0M1Ci7IaLM8Q7kNvwFdJ9q0&_nc_oc=AdrE6cmVdShQqMLeGKcwmQmZFXdAPB44OWSYVBJ4CYELHr0TUvdIvHOdWWnVUIRQVcVJWIFc0CKc8U7OhHTk5VP0&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=-8sjiWzT-5uiOhXO9kHkbw&_nc_ss=7b2a8&oh=00_AQPJgFLN8kspK_MaSgNeYpBDmqHxCl2D8UyWJ86ajE0ZhQ&oe=6ADE196D"
+            },
+            // {
+            //     id: 9,
+            //     name: "Handcrafted Tulip Stem Bouquet",
+            //     category: "accessories",
+            //     categoryLabel: "Accessories & Decor",
+            //     price: "₱220 - ₱650 ($4 - $12)",
+            //     description: "Everlasting crocheted tulip flowers tied in kraft paper with satin ribbon. Zero watering needed!",
+            //     options: "Single stem: ₱220 | Trio bouquet: ₱650.",
+            //     image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&h=600&q=80"
+            // }
+        ];
+
+        let currentCategory = 'all';
+        let searchQuery = '';
+
+        // Multi-page navigation handler
+        function switchPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-view').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            const target = document.getElementById(`page-${pageId}`);
+            if (target) {
+                target.classList.add('active');
+            }
+
+            // Update tab styles
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('bg-white', 'text-warm-gray', 'shadow-xs');
+                tab.classList.add('text-warm-gray/80');
+            });
+
+            const activeTab = document.getElementById(`nav-${pageId}`);
+            if (activeTab) {
+                activeTab.classList.add('bg-white', 'text-warm-gray', 'shadow-xs');
+                activeTab.classList.remove('text-warm-gray/80');
+            }
+
+            // Scroll smoothly to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleImgError(imgElement, name) {
+            imgElement.onerror = null;
+            const encodedName = encodeURIComponent(name);
+            imgElement.src = `https://placehold.co/600x600/EEF8F1/584C49?text=${encodedName}`;
+        }
+
+        // Render Product Cards
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const emptyState = document.getElementById('emptyState');
+            const itemCount = document.getElementById('itemCount');
+
+            const filtered = products.filter(item => {
+                const matchesCategory = (currentCategory === 'all') || (item.category === currentCategory);
+                const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      item.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            itemCount.textContent = `${filtered.length} ${filtered.length === 1 ? 'item' : 'items'}`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="group bg-white rounded-2xl border border-pastel-pink/20 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- 1:1 Aspect Ratio Square Picture -->
+                        <div class="relative w-full aspect-square overflow-hidden bg-pastel-green-light/30 cursor-pointer" onclick="openDetailModal(${item.id})">
+                            <img 
+                                src="${item.image}" 
+                                alt="${item.name}" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                onerror="handleImgError(this, '${item.name}')"
+                            >
+                            <span class="absolute top-2 left-2 bg-white/90 backdrop-blur-md text-warm-gray text-[9px] font-extrabold px-2 py-0.5 rounded-full border border-pastel-green/30 shadow-xs">
+                                ${item.categoryLabel}
+                            </span>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-3 sm:p-4 space-y-1">
+                            <h4 
+                                onclick="openDetailModal(${item.id})"
+                                class="font-heading font-bold text-xs sm:text-sm text-warm-gray hover:text-pastel-pink-dark transition cursor-pointer line-clamp-1"
+                                title="${item.name}"
+                            >
+                                ${item.name}
+                            </h4>
+                            <p class="text-pastel-pink-dark font-extrabold text-xs">
+                                ${item.price}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Button -->
+                    <div class="px-3 pb-3 sm:px-4 sm:pb-4 pt-0">
+                        <button 
+                            onclick="openDetailModal(${item.id})"
+                            class="w-full py-1.5 px-3 bg-pastel-purple-light/60 hover:bg-pastel-purple-light text-warm-gray text-[11px] font-bold rounded-xl transition flex items-center justify-center gap-1"
+                        >
+                            <i class="fa-regular fa-eye text-pastel-purple-dark"></i> View Details
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Category Filter
+        function filterCategory(cat) {
+            currentCategory = cat;
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.category === cat) {
+                    btn.classList.remove('bg-white', 'text-warm-gray', 'border');
+                    btn.classList.add('bg-pastel-pink-dark', 'text-white', 'active-tab');
+                } else {
+                    btn.classList.add('bg-white', 'text-warm-gray', 'border');
+                    btn.classList.remove('bg-pastel-pink-dark', 'text-white', 'active-tab');
+                }
+            });
+
+            const titles = {
+                all: '✨ All Items',
+                wardrobe: '👗 Wardrobe',
+                keychains: '🔑 Keychains',
+                amigurumis: '🧸 Amigurumi',
+                bouquet: '🌸 Bouquet',
+                bag_charms: 'Bag Charms',
+                desk_figure: 'Desk Figure',
+                bags: 'Bag',
+                hair_accesories: "Hair Accesories"
+
+            };
+            document.getElementById('currentCategoryTitle').innerHTML = titles[cat] || 'Catalog';
+
+            renderProducts();
+        }
+
+        // Search Handlers
+        function handleSearch() {
+            const input = document.getElementById('searchInput');
+            const clearBtn = document.getElementById('clearSearchBtn');
+            searchQuery = input.value.trim();
+
+            if (searchQuery.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+
+            renderProducts();
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('searchInput');
+            input.value = '';
+            searchQuery = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            renderProducts();
+        }
+
+        function resetFilters() {
+            clearSearch();
+            filterCategory('all');
+        }
+
+        // Modal Controls
+        function openDetailModal(id) {
+            const item = products.find(p => p.id === id);
+            if (!item) return;
+
+            document.getElementById('modalTitle').textContent = item.name;
+            document.getElementById('modalCategoryBadge').textContent = item.categoryLabel;
+            document.getElementById('modalPrice').textContent = item.price;
+            document.getElementById('modalDescription').textContent = item.description;
+            document.getElementById('modalOptions').textContent = item.options;
+            
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = item.image;
+            modalImg.onerror = () => handleImgError(modalImg, item.name);
+
+            const modal = document.getElementById('detailModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.children[0].classList.remove('scale-95');
+                modal.children[0].classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeDetailModal() {
+            const modal = document.getElementById('detailModal');
+            modal.classList.add('opacity-0');
+            modal.children[0].classList.remove('scale-100');
+            modal.children[0].classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        // Copy contact handler
+        function copyContact(text) {
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = text;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+            } catch (err) {
+                console.log('Copy error', err);
+            }
+            document.body.removeChild(tempTextArea);
+
+            showToast("Copied to Clipboard!", `"${text}" ready to paste.`);
+        }
+
+        function showToast(title, msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').textContent = title;
+            document.getElementById('toastMsg').textContent = msg;
+
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-4');
+                toast.classList.add('translate-y-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0');
+                toast.classList.add('translate-y-4');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 300);
+            }, 3000);
+        }
+
+        // Mobile Nav Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('mobileMenuIcon');
+            menu.classList.toggle('hidden');
+            
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        }
+
+        // Backdrop Click
+        window.onclick = function(event) {
+            const detailModal = document.getElementById('detailModal');
+            if (event.target === detailModal) {
+                closeDetailModal();
+            }
+        };
+
+        window.onload = function() {
+            renderProducts();
+        };
+    </script>
+</body>
+</html>
