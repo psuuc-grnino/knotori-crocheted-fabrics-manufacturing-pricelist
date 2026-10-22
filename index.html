@@ -160,7 +160,7 @@
     <!-- Sub Header Banner (Tagline) -->
     <div class="bg-gradient-to-r from-pastel-pink-light via-pastel-purple-light to-pastel-green-light border-b border-pastel-pink/20 py-2.5 px-4 text-center">
         <p class="text-xs sm:text-sm font-semibold text-warm-gray flex items-center justify-center gap-2">
-            <span>✨ Welcome, this page is currently on progress...</span>
+            <span>✨ Welcome, this webpage is currently on progress...</span>
             <span class="hidden sm:inline text-warm-gray/40">•</span>
         </p>
     </div>
@@ -216,13 +216,6 @@
                         👗 Wardrobe
                     </button>
                     <button 
-                        onclick="filterCategory('keychains')" 
-                        data-category="keychains"
-                        class="filter-btn bg-white text-warm-gray border border-pastel-pink/40 hover:bg-pastel-pink-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
-                    >
-                        🔑 Keychains
-                    </button>
-                    <button 
                         onclick="filterCategory('amigurumis')" 
                         data-category="amigurumis"
                         class="filter-btn bg-white text-warm-gray border border-pastel-purple/40 hover:bg-pastel-purple-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
@@ -251,11 +244,11 @@
                         Bags
                     </button>
                     <button 
-                        onclick="filterCategory('hair_accesories')" 
-                        data-category="hair_accesories"
+                        onclick="filterCategory('hair_accessories')" 
+                        data-category="hair_accessories"
                         class="filter-btn bg-white text-warm-gray border border-pastel-green/40 hover:bg-pastel-green-light px-4 py-1.5 rounded-full font-bold text-xs whitespace-nowrap shadow-xs hover:shadow transition"
                     >
-                        Hair Accesories
+                        Hair Accessories
                     </button>
                     <button 
                         onclick="filterCategory('pouch')" 
@@ -759,8 +752,9 @@
                 bag_charms: 'Bag Charms',
                 desk_figures: 'Desk Figures',
                 bags: 'Bag',
-                hair_accesories: "Hair Accesories",
-                pouch: 'Pouches/Wallet'
+                hair_accessories: "Hair Accessories",
+                pouch: 'Pouches/Wallet',
+                journal: 'Journal Things'
 
             };
             document.getElementById('currentCategoryTitle').innerHTML = titles[cat] || 'Catalog';
