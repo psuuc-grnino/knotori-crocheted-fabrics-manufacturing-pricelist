@@ -349,14 +349,4 @@ const products = [
                 options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
                 image: "https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/658368731_1599085045551116_3909997798100011941_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHK3nJUEHRirE3QzZlKIRqwl95edwIMdUyX3l53Agx1TLDhdjNkeljzDrYnut9eWUH1aJwK9gK-DM7fUQQ9kBJf&_nc_ohc=wnp1Ns890x0Q7kNvwHP6ovJ&_nc_oc=Adpuw7hQl1UwtDW3dMw1JlAzoH07azYPHDCPPW5yHK0qhtaeIwLoBzNNiWu4TTGeNBhjeI60kZztg7CembnMqsf-&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=Y9A2McjvCx2nrxBM6TX2GQ&_nc_ss=7b2a8&oh=00_AQPc-6Un-8Mz5Qk-7CCi5suc9jLPbTXp8AalTdCiGtl9zQ&oe=6ADFC5C5"
             },
-            // {
-            //     id: 47,
-            //     name: "Mirror Bag Charm",
-            //     category: "bag_charms",
-            //     categoryLabel: "Bag Charms/Keychains",
-            //     price: "₱135 (per piece) ₱80 (bulk orders)",
-            //     description: "Keychains Cuddle-sized teddy bear wearing a striped sleeping cap filled with hypoallergenic fiberfill.",
-            //     options: "Medium (8\"): ₱750 | Large (12\"): ₱1,100.",
-            //     image: "https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/658368731_1599085045551116_3909997798100011941_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHK3nJUEHRirE3QzZlKIRqwl95edwIMdUyX3l53Agx1TLDhdjNkeljzDrYnut9eWUH1aJwK9gK-DM7fUQQ9kBJf&_nc_ohc=wnp1Ns890x0Q7kNvwHP6ovJ&_nc_oc=Adpuw7hQl1UwtDW3dMw1JlAzoH07azYPHDCPPW5yHK0qhtaeIwLoBzNNiWu4TTGeNBhjeI60kZztg7CembnMqsf-&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=Y9A2McjvCx2nrxBM6TX2GQ&_nc_ss=7b2a8&oh=00_AQPc-6Un-8Mz5Qk-7CCi5suc9jLPbTXp8AalTdCiGtl9zQ&oe=6ADFC5C5"
-            // },
         ];
