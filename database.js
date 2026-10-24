@@ -34,7 +34,7 @@ const products = [
                 name: "Purple Two-Way Bag",
                 category: "bags",
                 categoryLabel: "Bags",
-                price: "₱350 (fixed price)",
+                price: "₱399 (fixed price)",
                 description: "Size: | Color: Lavander | Closure: Snaplock | Sling: Chain with Yarn | Materials: Polypropylene Yarn",
                 options: "On-hand. All colors available. Please negotiate with me for custom orders.",
                 image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.99422-6/799843833_4506672479661367_2754544163990443205_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFdxfF2c1BYWubLj0yoBbSJ5qVkyp5cSCbmpWTKnlxIJhBffvRt8tMvU02LSxVvhmtXweAMPpd34BdLmKi9tRim&_nc_ohc=FmDHDCLFjHwQ7kNvwEJpunu&_nc_oc=AdqDRPZauKxALPHx8I0lUidDu6n6-zgM2Yjjx-tHLwSMAoAi-_DYLIKxqwCUtC9YOsnONM35uj-9D3myXlw_4tEN&_nc_zt=14&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=DdYKXBAl9MbPmNwYNSy9zA&_nc_ss=7b2a8&oh=00_AQO3jVIBsGgFKgtra97pm9tLtpkHcD1xVN40KiS48UOoSQ&oe=6ADE1B48"
@@ -46,7 +46,7 @@ const products = [
                 categoryLabel: "Hairclips",
                 price: "₱35 (per piece) ₱20 (bulk orders)",
                 description: "Size: 7cm | Materials: Milk Cotton Yarn and Beads",
-                options: "Pre-Order. All colors available. Please negotiate with me for bulk orders.",
+                options: "Pre-Order. All colors available. Please negotiate with me for custom or bulk orders.",
                 image: "https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/605333419_1509522707840684_7557331121831109345_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2047&ctp=s2048x2047&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEsIdqwrVAL9AmMCKCCkrghy_Adm7JJIXHL8B2bskkhcZXQdSpTw_XEUzO3KyG2TAE5gAbggS4wz-rJk6_dgqQW&_nc_ohc=iFOBUJEKNlcQ7kNvwFgFfmX&_nc_oc=AdphtWNS7QGWGAZSXYBMuoMyFdmO1MP7JzqLeLW_HizKkVBFt29wdEKaQC2VNFFvVZYUEUvMx9n-cEIgJSVmkZWX&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=toiT_GOpHVD1a1su7pi1SA&_nc_ss=7b2a8&oh=00_AQNyQ2bqWiq6DtPs3dWWNR6YW6Zz_CsIs6Td9pCpokDE7Q&oe=6ADE0F14"
             },
             {
@@ -104,7 +104,7 @@ const products = [
                 name: "Lavander Hairclip",
                 category: "hair_accessories",
                 categoryLabel: "Hair Accessories",
-                price: "₱39 (pair) ₱25 (bulk orders)",
+                price: "₱39 (pair) ₱30 (pair - bulk orders)",
                 description: "Size: 5.5cm | Materials: Cotton Yarn",
                 options: "Pre-Order. All colors available. Please negotiate with me for custom and bulk orders.",
                 image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/594969482_1492349439558011_8517642575810589016_n.jpg?stp=dst-jpg_tt6&cstp=mx864x864&ctp=s864x864&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEzNlbWqyHMPBWgEUNHlP92D5jHeo4hbFkPmMd6jiFsWXgVK0zJeXGt6PNQV_6LMgDxRcsEnxZTTKYPzQxyuxxW&_nc_ohc=5xjQL3J7bRgQ7kNvwENSvDP&_nc_oc=Adp7dsI5_GLG9TH3Tv5UHkH6HVhA_KfRzC5brn3uR6sSNy1xCwayISKrJ1u4WAsg7wY39AO4j6n_rKAKJo6lHMIp&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=VJpG8wTHDK1ovN7XRjpW3w&_nc_ss=7b2a8&oh=00_AQPBWSHd6IIk57mN6Ie-kJlWucpzagncLad0G6a2pgbURg&oe=6ADFA00A"
@@ -154,9 +154,9 @@ const products = [
                 name: "Circular Pearl Bag",
                 category: "bags",
                 categoryLabel: "Bags",
-                price: "₱359 (can customize)",
+                price: "₱359 (fixed price)",
                 description: "Size: | Color: Lavander | Closure: Snaplock | Sling: Chain with Yarn | Materials: Polypropylene Yarn",
-                options: "Pre-Order. All colors available. Please negotiate with me for custom orders.",
+                options: "Pre-Order.Please negotiate with me for custom orders.",
                 image: "https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.99422-6/789034073_2891781271163576_6594214648410064482_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGnnw7wAwj8xUj01uh18jOU__XIN0Kp2qP_9cg3Qqnao8AIbc0AmXVJ0li9dD2ebghnT-oM8u87vTKs5xFYk7z_&_nc_ohc=ZIQe7T5ECwMQ7kNvwGH9Mf8&_nc_oc=AdqyzzhNKlA1xLvVxwX49A2klLV0OeJO6pLaj9r330XjaqNsG1H-uiPXmV7wWYJNH1ONbOQ3fPL0O5gy7AYskGBL&_nc_zt=14&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=5Kgduhq7HjcIJ38KVEUQPw&_nc_ss=7b2a8&oh=00_AQPFaCdqOyN1ckbQZ0Vwa41CvlpX9-ghI7ThpjL3ASV7qg&oe=6ADFB626"
             },
             {
@@ -166,7 +166,7 @@ const products = [
                 categoryLabel: "Desk Figures",
                 price: "₱69 (per piece) ₱50 (bulk orders)",
                 description: "Size: 10cm | Materials: Milk Cotton Yarn, inside Fibers, Stick",
-                options: "Pre-Order. All colors available. Please negotiate with me for custom and bulk orders.",
+                options: "On-hand. Please negotiate with me for custom and bulk orders.",
                 image: "https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/766748152_1720823293377290_8821143316213952086_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s552x414&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGatsT9cbtDA5ZRLzKGJmCpHRC8OdkxBWkdELw52TEFaXHFcA56AhjPqZnPVJX6RdFdijsTUs72WR3Q_0hwLfBa&_nc_ohc=BURZHiGiW8wQ7kNvwGYb7NR&_nc_oc=AdpKmnJEfNj6TH17URNeMFRJDaT34hyaYopQ7tSZ6YwKuFLpOEigR3OYA2AcQ3dl-OYAFXKwYxPes3zhD0KQ5S6B&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=1uBt1fzihxqR7FYZsId3nw&_nc_ss=7b2a8&oh=00_AQPD2mq46_Litr5zQssBxMTOmnaywFZZ4lk7tkqdV2NMxg&oe=6ADFBB9Chttps://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/766748152_1720823293377290_8821143316213952086_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGatsT9cbtDA5ZRLzKGJmCpHRC8OdkxBWkdELw52TEFaXHFcA56AhjPqZnPVJX6RdFdijsTUs72WR3Q_0hwLfBa&_nc_ohc=BURZHiGiW8wQ7kNvwGYb7NR&_nc_oc=AdpKmnJEfNj6TH17URNeMFRJDaT34hyaYopQ7tSZ6YwKuFLpOEigR3OYA2AcQ3dl-OYAFXKwYxPes3zhD0KQ5S6B&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=jfPKV5sXIM5Dd2W3mrTX9g&_nc_ss=7b2a8&oh=00_AQPa8JmhlRFLDbgbhwm8TkFQWa5zPsNWbxmML3X0IIXDkg&oe=6ADFBB9C"
             },
             {
@@ -226,7 +226,7 @@ const products = [
                 categoryLabel: "Desk Figure/Keychain",
                 price: "₱59 (per piece) ₱40 (bulk order)",
                 description: "Size: 9cm | Materials: Milk Cotton Yarn",
-                options: "Pre-Order. All colors available. Please negotiate with me for custom and bulk orders.",
+                options: "On-hand. All colors available. Please negotiate with me for custom and bulk orders.",
                 image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/764975743_1720823616710591_1268293003662743280_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFTaGG7ptBSLvciZDpBExDGS2u5Fsr7BedLa7kWyvsF5w1PBscE1yqk7s961_wmpc18YHMrCrSrJOz3ccldPvKg&_nc_ohc=uddq2L-thR0Q7kNvwGCzQHZ&_nc_oc=AdoFngSq70avbUhPtZMAfiWgzd_582YOuNm27SGbeOL6pV-cc5grlogcuuM7JdDVn6NkBOzDDGnGQJJ-qAqvjd7n&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=HAlheiVAvSnfC7jBVMi6wA&_nc_ss=7b2a8&oh=00_AQMmSkUAJsY88yaPqdKELDKAsPNFKc5vOBmytxxp0zmE3g&oe=6ADFB40A"
             },
             {
@@ -296,7 +296,7 @@ const products = [
                 categoryLabel: "Journal Things",
                 price: "₱45 (per piece) ₱30 (bulk orders)",
                 description: "Lenght: 30cm | Materials: Milk Cotton Yarn",
-                options: "Pre-Order. All colors available. Please negotiate with me for custom and bulk orders.",
+                options: "On-hand. All colors available. Please negotiate with me for custom and bulk orders.",
                 image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.99422-6/825352820_1725930925166171_9179484615065442326_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHn8fC4SeZR9SBNOnQhFbdIRLoj6h4sW4xEuiPqHixbjCd17t6ZMuCQXY5qiiwzqpCBrJJinmX5e8QX188kvqJb&_nc_ohc=bOGt33c84RYQ7kNvwE5L0dH&_nc_oc=AdoGtTGxtbKmU_bSLUE02zPc04NZaXVn8yeI05w-OjSSFNpe5kJ43XTK2K-fv9I-Puc8JOyOewgXcB7yNYAw_xHm&_nc_zt=14&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=3BBiiUcyAn5tij1WGyuJ_g&_nc_ss=7b2a8&oh=00_AQPqts-8vCAdMDI-YZ5BjmEEQBg9w6gA_VbO5Cj8JdpFEg&oe=6ADFD486"
             },
             {
@@ -326,7 +326,7 @@ const products = [
                 categoryLabel: "Hairclips",
                 price: "₱30 (per piece) ₱20 (bulk orders)",
                 description: "Lenght: 8cm | Materials: Milk Cotton Yarn",
-                options: "Pre-Order. All colors available. Please negotiate with me for custom and bulk orders.",
+                options: "On-hand. All colors available. Please negotiate with me for custom and bulk orders.",
                 image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.99422-6/761627776_1023674413773037_5332288459523524541_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFt3J9VOmbgJltkxl85tZ14hVPo1VRFIrOFU-jVVEUisxUOIxVkRJFs3-fNaAzjqE6XzHY4TIRKISMtjMC0RA59&_nc_ohc=bFhpmgwB5pYQ7kNvwEp_sTI&_nc_oc=Adp9c2wzfIhWc84oRdVLdm8-NtQZnIV5PwdbKmK3I4xGE93436Fvc_DWfTgP0wxy8lNa44HfVQUmdWtdaWUrNhz6&_nc_zt=14&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=luqKMmGTB2SCqU_6V2PPsw&_nc_ss=7b2a8&oh=00_AQM03SRO4Sv0ZIKCbduAEYQQe7QHJANZzZ7buJ7OFgcL4Q&oe=6ADFEB33"
             },
             {
@@ -337,16 +337,66 @@ const products = [
                 price: "₱50 (per piece) ₱30 (bulk orders)",
                 description: "Lenght: 5.5cm | Materials: Milk Cotton Yarn",
                 options: "Pre-Order. All colors available. Please negotiate with me for custom and bulk orders.",
-                image: "https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.99422-6/849130336_1897283884578535_1548525001644063348_n.png?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFsu3QZIfADebMFzdfrnUvsjqGmL9HZXrWOoaYv0dletQCmH2mA1oHVKNZqwy0YM49isurjacBwoQa5nne2GFzL&_nc_ohc=YlVTMRwepqAQ7kNvwG8BTXn&_nc_oc=AdpOO0H-HlTUbynq20jV8FgE8m72ZUDpWEZPJJkRLN-Aih6UeAcepqMqilUfHa6CBnsbXdZdM_t15mxChFXSnu2U&_nc_zt=14&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=Uz_GeLS9chAnO2m6Z9iH-g&_nc_ss=7b2a8&oh=00_AQNgdYroKv-BflpkpTtrSMRabNoBpgsv3gTzkkZo2FtOBA&oe=6ADFE194"
+                image: "https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.99422-6/860115581_3124531097938300_4254818979308208413_n.png?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEFzjZZy-oAKWntqSdBmi8aJrlL0Chh-SImuUvQKGH5ItGbqUkTbftBBCmyhbo6qkdvgutdt3RnvYKvVgwiqQHl&_nc_ohc=ZJYUImPd0AkQ7kNvwGszJf8&_nc_oc=AdoL66FUtNQvgOQZgS3COEueA_7ulgQw0JXVZX8iHj10zHDepa70W--Mjzao4kxJu3L2TjK90f3OJqJeGDSGOmEw&_nc_zt=14&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=_VoFFxEs4IOnq9f9NbJJ3Q&_nc_ss=7b2a8&oh=00_AQPIXTAiB4lCbfGxbbUraNmJ1J4mQz_nwch44sWkRdkWNQ&oe=6AE1F2BA"
             },
             {
                 id: 35,
-                name: "Mirror Bag Charm",
+                name: "Cat Paw Mirror Bag Charm",
                 category: "bag_charms",
                 categoryLabel: "Bag Charms/Keychains",
                 price: "₱135 (per piece) ₱80 (bulk orders)",
                 description: "Materials: Cotton Yarn | Note: Mirror included and can be use as keychain",
                 options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
                 image: "https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/658368731_1599085045551116_3909997798100011941_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHK3nJUEHRirE3QzZlKIRqwl95edwIMdUyX3l53Agx1TLDhdjNkeljzDrYnut9eWUH1aJwK9gK-DM7fUQQ9kBJf&_nc_ohc=wnp1Ns890x0Q7kNvwHP6ovJ&_nc_oc=Adpuw7hQl1UwtDW3dMw1JlAzoH07azYPHDCPPW5yHK0qhtaeIwLoBzNNiWu4TTGeNBhjeI60kZztg7CembnMqsf-&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=Y9A2McjvCx2nrxBM6TX2GQ&_nc_ss=7b2a8&oh=00_AQPc-6Un-8Mz5Qk-7CCi5suc9jLPbTXp8AalTdCiGtl9zQ&oe=6ADFC5C5"
+            },
+            {
+                id: 36,
+                name: "Cake Rolls Keychain",
+                category: "keychains",
+                categoryLabel: "Bag Charms/Keychains",
+                price: "₱30 (per piece) ₱20 (bulk orders)",
+                description: "Materials: Cotton Yarn",
+                options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
+                image: "https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/669580232_1609427614516859_4666632305692755863_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s1536x2048&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFuqUOSX3M9usZzNXuzhpK9F3lF5ziKzI8XeUXnOIrMj4MsEmmyqG6tuJW-04uSj6mLn5feksrfZT6P3tHZPnN3&_nc_ohc=m4dkshDrwW8Q7kNvwEmmNxf&_nc_oc=AdrKPZaXNlVfyWgt01SThOWiMY5bsiTHQpFIXSCuNMqM8SopQ3WEP6r7lLKtGFYYEnWI2GtfHMBuvjzEcTNywriu&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=IP_ykkPwiGA3bh6HRDiUdQ&_nc_ss=7b2a8&oh=00_AQOjGpRNstQiQL--auTMLW24urVrHNTVOaOmKXAbFjJHZA&oe=6AE205C8"
+            },
+            {
+                id: 37,
+                name: "Frog Mirror Bag Charm",
+                category: "bag_charms",
+                categoryLabel: "Bag Charms/Keychains",
+                price: "₱135 (per piece) ₱80 (bulk orders)",
+                description: "Materials: Cotton Yarn | Note: Mirror included and can be use as keychain",
+                options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
+                image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/658186051_1599084932217794_4440982523507063233_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeE-PqloKeamV157CEfNHDFi5uVp_LRfn1Hm5Wn8tF-fUUboDP0z24Oyhl8saAwZAkRxOkaACUPdv46pOX8pZo5l&_nc_ohc=eZpVfhJWt-EQ7kNvwHo115h&_nc_oc=Adp4YpRmCbpCwsKRShVrNI79oiLSjl4wHtHIhFo2kOYgKmbNBzbKv3TL5tXgOatPxccH-DQ9xRirHvzTpuVBQ9y9&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=FJ4WpY3hgC1WQ36P1f_jlA&_nc_ss=7b2a8&oh=00_AQNipnZ7Zr36lPrBKggza68goVJbFWIxEUP24xo8U_9RUA&oe=6AE1FCB2"
+            },
+            {
+                id: 38,
+                name: "Simple Daisy Keychain",
+                category: "keychains",
+                categoryLabel: "Bag Charms/Keychains",
+                price: "₱20 (per piece) ₱15 (bulk orders)",
+                description: "Materials: Cotton Yarn",
+                options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
+                image: "https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/604823434_1511368610989427_7016716242692371537_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s552x414&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEYA4VCGOHkuxjjw1ZlThdzMo5X651dWpwyjlfrnV1anGkD8w79CaAFjwe3iI1MQeGvDP7DGcXTUPLrAhID3oBg&_nc_ohc=VrLvncEcH3IQ7kNvwH4O-rs&_nc_oc=AdpIOPhgke_Mm7ArVFe-E6j8ksB0RuUMuvlnc2TRzo2wNYLjz1Imm176JUprb3th-kmDS6ofnG3IJ2HiUa3X_NEt&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=kZRCBVCOgxnan_QvhwOEug&_nc_ss=7b2a8&oh=00_AQPAXhRMmsgQrGffq3r5mSREgRS1b9v4YiRs5hIjEiOxnw&oe=6AE1E823"
+            },
+            {
+                id: 39,
+                name: "Flat Strawberry Keychain",
+                category: "keychains",
+                categoryLabel: "Bag Charms/Keychains",
+                price: "₱25 (per piece) ₱17 (bulk orders)",
+                description: "Materials: Cotton Yarn",
+                options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
+                image: "https://scontent.fcrk3-2.fna.fbcdn.net/v/t39.30808-6/605137632_1511368524322769_1997442796640188499_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHtMIu59ksQto78Xl8GsTk5ljxFCLBWgfWWPEUIsFaB9avwSuSlaSKWvsXHJjF6AnXQgcBQlOrxMrHE1lCtqS4o&_nc_ohc=tGr46VcY8p8Q7kNvwF038T-&_nc_oc=AdqLvcPcta23bK2qR7yfABMizPfbRBy2Hg7RoD8DBh-kGbl0KCW0tVKmLVfAVUdyY788jNRa6OOSRM7XUCP4UGnp&_nc_zt=23&_nc_ht=scontent.fcrk3-2.fna&_nc_gid=sp2OnmZY8uMUKwj909-WwA&_nc_ss=7b2a8&oh=00_AQNWdf0pjwjkz4OMiIHndi_AhPq8m2MmDttGXlYhWSTB3w&oe=6AE1FC36"
+            },
+            {
+                id: 39,
+                name: "Single Tulip Keychain",
+                category: "keychains",
+                categoryLabel: "Bag Charms/Keychains",
+                price: "₱25 (per piece) ₱17 (bulk orders)",
+                description: "Materials: Cotton Yarn",
+                options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
+                image: "https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.99422-6/742144950_27737340849216372_7833155595655758122_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGTf2nVu4L37scEX-xNfObE-jgDevlxCBP6OAN6-XEIE4YPyy_lvUh4xo0CSPxVA_LQMMISKq7ctx4u_Qlgoj7K&_nc_ohc=8dvaJclRsXEQ7kNvwEYgPG6&_nc_oc=AdrTAlmtvMjrfkNiGsnq-07St1AbsZ-WW-WsaHRxJb5TEtT7A0KtWHJF7Nl6_Z3MXiMqFL05nbeSSQ25PYov4Dxf&_nc_zt=14&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=daqqMUFI4rh6XeLoE_GuNw&_nc_ss=7b2a8&oh=00_AQM64agAQxdMBVI0bYqJCAcPCtROz_o46qxkzdd11vDHHw&oe=6AE1DB38"
             },
         ];
