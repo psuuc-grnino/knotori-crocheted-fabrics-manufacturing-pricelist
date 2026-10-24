@@ -409,5 +409,14 @@ const products = [
                 options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
                 image: "https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/660127522_1599084775551143_8823165457617295265_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEiZ8BCqQ_3if-ln6pB7KDH28y4V5nnv3TbzLhXmee_dFxYNinStVwEPPk7js6VWJcUF-9EIplAylWO1X6XBZVM&_nc_ohc=zgmhU7FHFfsQ7kNvwFxHzr5&_nc_oc=AdooAjZRO2_h2_wrXYWFhYmTsuJXwrBSM_zFuaAxepF1WiPKudj0IM742gt2ee58pY74NFA5qifBIS43V7NA8Hbo&_nc_zt=23&_nc_ht=scontent.fcrk3-1.fna&_nc_gid=YIEOjZD7a6gXnunzcqSjow&_nc_ss=7b2a8&oh=00_AQOGlmWcNDpTnKE7kPYmxPGupxrnlZwrjECEDbFmAUv9Eg&oe=6AE1EA4F"
             },
-            
+            {
+                id: 41,
+                name: "Ghibli Soot Sprite Furry Keychain",
+                category: "keychains",
+                categoryLabel: "Bag Charms/Keychains",
+                price: "₱35 (per piece) ₱25 (bulk orders)",
+                description: "Materials: Squirel Yarn",
+                options: "Pre-Order. All colors available. Please negotiate with me for custom & bulk orders.",
+                image: "https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.99422-6/741215827_1677028063591795_8127198958510725514_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGaP72008sjbB2cmC2UGDni5kIIonTXt97mQgiidNe33rwSJwLwp3ElBgeDOEHcAVNGoP5RYTEjFGsrpSvCvt2S&_nc_ohc=nSFQTyslXOEQ7kNvwEFQZuu&_nc_oc=AdpzZY95AhcjRfSzcHAyEmMBanLRZeFhrq9Roi5kkOGTZQkbgNdXlW6osY4SuivXYjsLnxkqyJJtDp2dEsQVc7hN&_nc_zt=14&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=K9HbROTk2DjitxuYfWL79Q&_nc_ss=7b2a8&oh=00_AQOsH8LBvRZwisrpwOD5TazceoV94BqAy4SLEBRKNnUlIg&oe=6AE1DC34"
+            },
         ];
